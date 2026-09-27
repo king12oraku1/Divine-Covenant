@@ -1,0 +1,286 @@
+
+
+
+@media (max-width: 1200px) {
+  :root { --max-width: 1100px; }
+
+  .container { padding-inline: var(--space-xl); }
+
+  .ministries-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: var(--space-xl);
+  }
+
+  .give-cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+@media (max-width: 1024px) {
+  :root {
+    --space-3xl: 72px;
+    --space-2xl: 48px;
+  }
+
+  
+  .navbar-nav,
+  .navbar-actions .btn { display: none; }
+
+  .hamburger { display: flex; }
+  .mobile-menu { display: flex; }
+
+  
+  .hero-title { font-size: clamp(2.4rem, 5vw, 3.6rem); }
+
+  
+  .welcome-grid { grid-template-columns: 1fr 1fr; }
+  .schedule-card { position: static; grid-column: 1 / -1; }
+
+  
+  .ministries-grid { grid-template-columns: repeat(3, 1fr); }
+
+  
+  .events-grid { grid-template-columns: repeat(2, 1fr); }
+
+  
+  .pastor-grid { grid-template-columns: 300px 1fr; }
+
+  
+  .cta-content { grid-template-columns: 1fr; }
+  .giving-card { min-width: auto; }
+
+  
+  .contact-grid { grid-template-columns: 1fr; }
+
+  
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+
+  
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .give-cards { grid-template-columns: repeat(2, 1fr); }
+  .mission-vision-grid { grid-template-columns: 1fr; }
+  .two-col-text { grid-template-columns: 1fr; gap: var(--space-xl); }
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 56px;
+    --space-2xl: 40px;
+    --nav-height: 68px;
+  }
+
+  .container { padding-inline: var(--space-lg); }
+
+  
+  .hero { min-height: 100svh; }
+  .hero-inner { max-width: 100%; }
+  .hero-title { font-size: clamp(2rem, 7vw, 3rem); }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-buttons { flex-direction: column; gap: var(--space-sm); }
+  .hero-buttons .btn { width: 100%; justify-content: center; }
+  .hero-meta { gap: var(--space-lg); }
+
+  
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .welcome-img-wrap { aspect-ratio: 16/9; }
+
+  
+  .ministries-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+
+  
+  .events-grid { grid-template-columns: 1fr; }
+  .events-header-row { flex-direction: column; align-items: flex-start; }
+
+  
+  .pastor-grid { grid-template-columns: 1fr; }
+  .pastor-img-wrap { aspect-ratio: 4/3; max-width: 400px; margin-inline: auto; }
+
+  
+  .footer-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .footer-bottom-inner { flex-direction: column; text-align: center; }
+
+  
+  .events-page-grid { grid-template-columns: 1fr; }
+  .give-cards { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .form-grid-2 { grid-template-columns: 1fr; }
+  .mission-vision-grid { grid-template-columns: 1fr; }
+
+  
+  .event-page-card {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  
+  .cta-content { padding-block: var(--space-xl); }
+
+  
+  .verse-text { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+
+  
+  .section-heading { font-size: clamp(1.5rem, 4vw, 2rem); }
+}
+
+
+@media (max-width: 480px) {
+  :root {
+    --space-3xl: 48px;
+    --space-2xl: 36px;
+    --space-xl: 28px;
+    --nav-height: 64px;
+  }
+
+  .container { padding-inline: var(--space-md); }
+
+  
+  .logo-tag { display: none; }
+  .logo-name { font-size: 0.85rem; }
+
+  
+  .hero-title { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+  .hero-meta { flex-direction: column; gap: var(--space-md); }
+  .hero-content {
+    padding-block: calc(var(--nav-height) + var(--space-xl)) var(--space-xl);
+  }
+
+  
+  .ministries-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-sm); }
+  .ministry-card-body { padding: var(--space-md); }
+  .ministry-icon { font-size: 1.4rem; }
+  .ministry-name { font-size: 0.95rem; }
+  .ministry-desc { font-size: 0.78rem; }
+
+  
+  .event-card-top { flex-direction: column; gap: var(--space-sm); }
+  .event-date-badge { width: 100%; flex-direction: row; height: auto; padding: 8px 12px; gap: var(--space-sm); }
+  .event-date-month, .event-date-day { display: inline; }
+
+  
+  .schedule-card { padding: var(--space-lg); }
+
+  
+  .pastor-img-wrap { max-width: 100%; aspect-ratio: 3/4; }
+
+  
+  .footer-brand-tagline { max-width: 100%; }
+
+  
+  .btn { padding: 12px 22px; font-size: 0.875rem; }
+  .btn-lg { padding: 14px 28px; font-size: 0.95rem; }
+
+  
+  .page-hero-title { font-size: clamp(1.6rem, 6vw, 2.5rem); }
+
+  
+  .form-input, .form-textarea, .form-select {
+    padding: 11px 14px;
+    font-size: 0.875rem;
+  }
+
+  
+  .give-card { padding: var(--space-lg); }
+
+  
+  .value-card { padding: var(--space-lg); }
+}
+
+
+@media (max-width: 390px) {
+  :root {
+    --space-xl: 24px;
+    --space-2xl: 32px;
+    --space-3xl: 40px;
+  }
+
+  .hero-title { font-size: clamp(1.6rem, 8vw, 2.2rem); }
+
+  .ministries-grid { grid-template-columns: 1fr 1fr; }
+
+  .logo-denom { display: none; }
+
+  .schedule-item { gap: var(--space-sm); }
+  .schedule-icon { width: 30px; height: 30px; font-size: 0.9rem; }
+
+  .section-heading { font-size: clamp(1.4rem, 5vw, 1.8rem); }
+
+  .footer-bottom-links { gap: var(--space-md); }
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+  min-width: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  
+  [style*="grid-template-columns:1fr 1.2fr"],
+  [style*="grid-template-columns:1fr 1.1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  
+  [style*="grid-template-columns:repeat(2,1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  
+  .ministries-grid .ministry-card[style*="grid-column"] {
+    grid-column: span 1 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  
+  [style*="grid-template-columns:1fr 1.2fr"],
+  [style*="grid-template-columns:1fr 1.1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .two-col-text[style*="direction:rtl"] {
+    direction: ltr !important;
+  }
+}
+
+
+@media (max-width: 768px) {
+  
+  [class="container"] > [style*="grid-template-columns:repeat(4,1fr)"],
+  .container [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container [style*="grid-template-columns:repeat(4,1fr)"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  
+  
+}
