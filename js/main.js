@@ -144,7 +144,7 @@
   const submitBtn = form.querySelector('[type="submit"]');
 
   // The church email address — update this to the real address
-  const CHURCH_EMAIL = 'info@divinecovenant.org';
+  const CHURCH_EMAIL = 'rccgdivinecovenant1@gmail.com';
 
   // ── helpers ──────────────────────────────────────────────────────
   function showNotice(msg, isError) {
@@ -291,4 +291,60 @@ To reply, email: ${email}`;
   const yearEls = document.querySelectorAll('.js-year');
   const year    = new Date().getFullYear();
   yearEls.forEach(el => { el.textContent = year; });
+})();
+
+
+// Verse carousel — auto-advances every 3 s, supports dots + touch swipes
+(function initVerseCarousel() {
+  const carousels = document.querySelectorAll('.verse-carousel');
+  if (!carousels.length) return;
+
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.verse-carousel-slide');
+    const dots   = carousel.querySelectorAll('.verse-carousel-dot');
+    if (!slides.length) return;
+
+    let current  = 0;
+    let timer    = null;
+    const DELAY  = 3000;
+
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      if (dots[current]) dots[current].classList.remove('active');
+
+      current = (index + slides.length) % slides.length;
+
+      slides[current].classList.add('active');
+      if (dots[current]) dots[current].classList.add('active');
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(next, DELAY);
+    }
+
+    // Initialise first slide
+    goTo(0);
+    startTimer();
+
+    // Dot clicks
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => { goTo(i); startTimer(); });
+    });
+
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => clearInterval(timer));
+    carousel.addEventListener('mouseleave', startTimer);
+
+    // Swipe support (touch)
+    let touchStartX = 0;
+    carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) { diff > 0 ? next() : prev(); startTimer(); }
+    }, { passive: true });
+  });
 })();

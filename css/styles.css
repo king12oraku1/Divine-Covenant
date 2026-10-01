@@ -1910,3 +1910,134 @@ input, textarea, select { font-family: inherit; }
     rgba(213, 160, 32, 0.06) 100%
   );
 }
+
+
+/* ══════════════════════════════════════════════════════
+   VERSE CAROUSEL
+   ══════════════════════════════════════════════════════ */
+.verse-carousel {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Each slide fills the full height and stacks */
+.verse-carousel-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.verse-carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Background image layer */
+.verse-carousel-slide .verse-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.verse-carousel-slide .verse-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* Overlay — each slide has a deep tint over the image */
+.verse-carousel-slide .verse-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.verse-carousel-slide:nth-child(1) .verse-overlay {
+  background: linear-gradient(135deg, rgba(3,19,41,0.88) 0%, rgba(6,27,58,0.78) 100%);
+}
+
+.verse-carousel-slide:nth-child(2) .verse-overlay {
+  background: linear-gradient(135deg, rgba(20,10,5,0.85) 0%, rgba(80,40,10,0.70) 100%);
+}
+
+/* Content */
+.verse-carousel-slide .verse-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+  padding-block: var(--space-2xl);
+}
+
+/* Navigation dots */
+.verse-carousel-dots {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.verse-carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  padding: 0;
+}
+
+.verse-carousel-dot.active,
+.verse-carousel-dot:hover {
+  background: var(--gold);
+  transform: scale(1.3);
+}
+
+/* Prev / Next arrow buttons */
+.verse-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.10);
+  border: 1.5px solid rgba(255,255,255,0.25);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+  backdrop-filter: blur(4px);
+}
+
+.verse-carousel-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-dark);
+}
+
+.verse-carousel-btn--prev { left: var(--space-lg); }
+.verse-carousel-btn--next { right: var(--space-lg); }

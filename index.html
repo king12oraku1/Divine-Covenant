@@ -162,7 +162,7 @@
             <div class="schedule-icon" aria-hidden="true"><i class="ph ph-sun"></i></div>
             <div class="schedule-info">
               <span class="schedule-name">Sunday school</span>
-              <span class="schedule-time">9:00 AM</span>
+              <span class="schedule-time">8:00 AM</span>
             </div>
           </li>
           <li class="schedule-item">
@@ -179,13 +179,7 @@
               <span class="schedule-time">5:00 PM – 6:00 PM</span>
             </div>
           </li>
-          <li class="schedule-item">
-            <div class="schedule-icon" aria-hidden="true"><i class="ph ph-hands-praying"></i></div>
-            <div class="schedule-info">
-              <span class="schedule-name">Hour of Favour (Wednesday)</span>
-              <span class="schedule-time">10:00 AM – 12 Noon &nbsp;·&nbsp; RCCG Rock of Ages</span>
-            </div>
-          </li>
+          
           <li class="schedule-item">
             <div class="schedule-icon" aria-hidden="true"><i class="ph ph-cross"></i></div>
             <div class="schedule-info">
@@ -220,10 +214,47 @@
     </div>
   </div>
 </section>
+<!-- ══════════════════════════════════════════════════════
+     3. PASTOR SECTION
+     ══════════════════════════════════════════════════════ -->
+<section class="pastor-section section-pad" aria-labelledby="pastor-heading">
+  <div class="container">
+    <div class="pastor-grid">
 
+      <div class="pastor-img-wrap fade-up">
+        <img
+          src="assets/IMG_E0302.JPG"
+          alt="Pastor Mrs Adelaja — APICP, Divine Covenant RCCG"
+          loading="lazy"
+        />
+        <div class="pastor-badge">
+          <span class="pastor-badge-name">Pastor Mrs Adelaja</span>
+          <span class="pastor-badge-role">APICP — Divine Covenant RCCG</span>
+        </div>
+      </div>
+
+      <div class="pastor-text fade-up delay-2">
+        <span class="eyebrow">A Word From Our Pastor</span>
+        <h2 id="pastor-heading" class="section-heading">Welcome to<br>Divine Covenant</h2>
+        <div class="gold-line"></div>
+        <p>
+          We are delighted that you've chosen to connect with Divine Covenant.
+          Whether you're visiting for the first time or you've been part of our family
+          for years, there is a place for you here.
+        </p>
+        <p>
+          Our heart is to see every person discover their God-given purpose, experience
+          authentic community, and grow deeper in their walk with Christ.
+          We look forward to worshipping with you.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════════════════════════════════
-     3. MINISTRIES SECTION
+     4. MINISTRIES SECTION
      ══════════════════════════════════════════════════════ -->
 <section class="ministries-section section-pad" aria-labelledby="ministries-heading">
   <div class="container">
@@ -372,23 +403,7 @@
         </div>
       </article>
 
-      <!-- Hour of Favour — Wednesday @ Rock of Ages -->
-      <article class="event-card fade-up delay-2">
-        <div class="event-card-top">
-          <div class="event-date-badge" aria-label="Every Wednesday">
-            <span class="event-date-month">WED</span>
-            <span class="event-date-day small">Weekly</span>
-          </div>
-          <div class="event-info">
-            <h3 class="event-title">Hour of Favour</h3>
-            <p class="event-time">
-              <i class="ph ph-clock" aria-hidden="true"></i>
-              10:00 AM – 12 Noon
-            </p>
-            <span class="event-category">Prayer</span>
-          </div>
-        </div>
-      </article>
+      
 
       <!-- Faith Clinic — Thursday weekly -->
       <article class="event-card fade-up delay-3">
@@ -432,23 +447,48 @@
 
 
 <!-- ══════════════════════════════════════════════════════
-     6. BIBLE VERSE SECTION
+     6. BIBLE VERSE CAROUSEL
      ══════════════════════════════════════════════════════ -->
-<section class="verse-section" aria-label="Scripture verse">
+<section class="verse-carousel" aria-label="Scripture verses" aria-roledescription="carousel">
 
-  <div class="verse-bg" aria-hidden="true">
-    <img src="assets/IMG_E0310.JPG" alt="" />
+  <!-- Slide 1 — Psalm 71:21 -->
+  <div class="verse-carousel-slide active" role="group" aria-roledescription="slide" aria-label="Verse 1 of 2">
+    <div class="verse-bg" aria-hidden="true">
+      <img src="assets/IMG_E0310.JPG" alt="" />
+    </div>
+    <div class="verse-overlay" aria-hidden="true"></div>
+    <div class="verse-content fade-up">
+      <span class="verse-mark" aria-hidden="true">"</span>
+      <blockquote>
+        <p class="verse-text">
+          Thou shalt increase my greatness, and comfort me on every side.
+        </p>
+        <footer class="verse-ref">— Psalm 71:21</footer>
+      </blockquote>
+    </div>
   </div>
-  <div class="verse-overlay" aria-hidden="true"></div>
 
-  <div class="verse-content fade-up">
-    <span class="verse-mark" aria-hidden="true">"</span>
-    <blockquote>
-      <p class="verse-text">
-        My grace is sufficient for thee: for my strength is made perfect in weakness.
-      </p>
-      <footer class="verse-ref">— 2 Corinthians 12:9</footer>
-    </blockquote>
+  <!-- Slide 2 — Hebrews 13:8 -->
+  <div class="verse-carousel-slide" role="group" aria-roledescription="slide" aria-label="Verse 2 of 2">
+    <div class="verse-bg" aria-hidden="true">
+      <img src="assets/IMG_E0308.JPG" alt="" />
+    </div>
+    <div class="verse-overlay" aria-hidden="true"></div>
+    <div class="verse-content fade-up">
+      <span class="verse-mark" aria-hidden="true">"</span>
+      <blockquote>
+        <p class="verse-text">
+          Jesus Christ the same yesterday, and to day, and for ever.
+        </p>
+        <footer class="verse-ref">— Hebrews 13:8</footer>
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="verse-carousel-dots" role="tablist" aria-label="Select verse">
+    <button class="verse-carousel-dot active" role="tab" aria-selected="true"  aria-label="Verse 1"></button>
+    <button class="verse-carousel-dot"        role="tab" aria-selected="false" aria-label="Verse 2"></button>
   </div>
 
 </section>
@@ -653,15 +693,13 @@
             Knowing Christ. Growing Together. Serving Others.
           </p>
           <div class="footer-social" aria-label="Social media links">
-            <a href="#" class="footer-social-link" aria-label="Facebook" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/share/1StN6Zuf6v/" class="footer-social-link" aria-label="Facebook" rel="noopener noreferrer">
               <i class="ph ph-facebook-logo" aria-hidden="true"></i>
             </a>
-            <a href="#" class="footer-social-link" aria-label="Instagram" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/rccg_divine_covenant_ijb?stkn=MWYwbnhleDRta241MQ==" class="footer-social-link" aria-label="Instagram" rel="noopener noreferrer">
               <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
-            <a href="#" class="footer-social-link" aria-label="YouTube" rel="noopener noreferrer">
-              <i class="ph ph-youtube-logo" aria-hidden="true"></i>
-            </a>
+            
           </div>
         </div>
 
@@ -712,7 +750,7 @@
             </li>
             <li class="footer-contact-item">
               <i class="ph ph-envelope footer-contact-icon" aria-hidden="true"></i>
-              <span>[info@divinecovenant.org]</span>
+              <span>rccgdivinecovenant1@gmail.com</span>
             </li>
           </ul>
         </div>
